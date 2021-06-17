@@ -1,68 +1,112 @@
-- Start Date: (fill me in with today's date, YYYY-MM-DD)
-- RFC PR: (leave this empty)
-- React Issue: (leave this empty)
+- Start Date: (2021-16-06)
+- RFC PR: 
+- Admin services Module: 
 
 # Summary
 
-Brief explanation of the feature.
+Admin services is like  control tower of the platzily application.  The admin module oveerseer the all administration system of the platzily platform.
 
-# Basic example
+Services like: 
 
-If the proposal involves a new or changed API, include a basic code example.
-Omit this section if it's not applicable.
+* Business Policies and content control policies 
+* Managment of the KPI and dashboard of the business process.
+
 
 # Motivation
 
-Why are we doing this? What use cases does it support? What is the expected
-outcome?
+Why are we doing this?
 
-Please focus on explaining the motivation so that if this RFC is not accepted,
-the motivation could be used to develop alternative solutions. In other words,
-enumerate the constraints you are trying to solve without coupling them too
-closely to the solution you have in mind.
+* The system requires dashboard to manage and control of the issues, campaings, statistics, links and users.
+
+What use cases does it support? 
+
+* When and user violates the policies of the business process admins services ban this user.
+
+* Reactivation of the state of a camping, user and links
+
+What is the expected outcome?
+
+* Successfully polcies control.
+* An informed user
+* Customized reports
+
+
 
 # Detailed design
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
-This is the bulk of the RFC. Explain the design in enough detail for somebody
-familiar with React to understand, and for somebody familiar with the
-implementation to implement. This should get into specifics and corner-cases,
-and include examples of how the feature is used. Any new terminology should be
-defined here.
+## Golang ▬ BACK
+
+* This programming lenguage its more powerfull than javascript. Its stable, and have high performacne memory process, his garbage collector are more efficient.
+
+* As a team and students we want challenge ourselves in learning process of a entirely new programing lenguage.
+
+* Is the favorite programing lenguage of our CEO.
+
+
+## Next.js ▬ FRONT
+
+* Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering.
+
+* TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
+
+
+* Give a knlowdege base of the architecture of the strcuture to build on. Allows to fast development.
+
+* Also is the favorite for the frontend of our CEO.
+
+
+## Architecture
+
+
+Main objective: Atenuate the coupling to the dependencies by connecting directly with Users and Links databases.
+We already know that this is not a common practice but for the priject is a useful one.
+
+* To have persistency and disponibility balance  of data our architecture are communicate with two differents databases. Users and Links.
+
+* Buscar referentes para justificar esto.  Persistencia y disponibalidad de bases  (Alejandro) (cap())
+
+* The relation with users and links module is to assurance ,create trustness and rapidy response to the user infraction policies.
+
+![Architecture](A:\Root\Personal_proyects\rfcs\images\Admin_Platzily)
+
+
+* Queda pediente la capa 3 del C4. (Diagrama de secuencia y el C3)
+* ¿Qué es un componente en la aplicación?
+
 
 # Drawbacks
 
-Why should we *not* do this? Please consider:
 
-- implementation cost, both in term of code size and complexity
-- whether the proposed feature can be implemented in user space
-- the impact on teaching people React
-- integration of this feature with other existing and planned features
-- cost of migrating existing React applications (is it a breaking change?)
+Tradeoff:
 
-There are tradeoffs to choosing any path. Attempt to identify them here.
+* Techincall Debt // New Skills in the team.
+* Easy development and rapid deployment. ( Next.js )
+* Maintain the consistency and disponiblity of data by controlling Users and Links databases.
+
+
 
 # Alternatives
 
-What other designs have been considered? What is the impact of not doing this?
+What other designs have been considered? 
+
+* Consume the services of Users and Links. And allow bans
+
+
+What is the impact of not doing this?
+
+* In case of User, Links doesnt work we cannot do bans of the links.
+
+
 
 # Adoption strategy
 
-If we implement this proposal, how will existing React developers adopt it? Is
-this a breaking change? Can we write a codemod? Should we coordinate with
-other projects or libraries?
+* Create rules to acces to the data bases of another services to manting good practices and constrains.
+
+* Sharing the control rules.
+
 
 # How we teach this
 
-What names and terminology work best for these concepts and why? How is this
-idea best presented? As a continuation of existing React patterns?
+* The learning curve of the tecnology stack will growth by pai programming strategies, Platzy courses and self education.
 
-Would the acceptance of this proposal mean the React documentation must be
-re-organized or altered? Does it change how React is taught to new developers
-at any level?
-
-How should this feature be taught to existing React developers?
-
-# Unresolved questions
-
-Optional, but suggested for first drafts. What parts of the design are still
-TBD?
