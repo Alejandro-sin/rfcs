@@ -68,7 +68,7 @@ We already know that this is not a common practice but for the priject is a usef
 
 * The relation with users and links module is to assurance ,create trustness and rapidy response to the user infraction policies.
 
-![Architecture](A:\Root\Personal_proyects\rfcs\images\Admin_Platzily)
+![Architecture](./images/Admin_Platzily.svg)
 
 
 * Queda pediente la capa 3 del C4. (Diagrama de secuencia y el C3)
